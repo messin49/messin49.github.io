@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dimension by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-skull-crossbones"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Michael Messina</h1>
+								<p>A collection of some of my work</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#work">Work</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="images/IMG_0982.jpg" alt="" /></span>
+								<p>Welcome to my page. I'm an aspiring Data Scientist who loves to work with all types of information but especially sports and weather data specifically. I received my Bachelors degree from Michigan State University in Finance with a minor in economics and have been working in the U.S. Derivatives Industry in Regulation since graduation. My interests have since taken me to the development and data world where I am currently finishing my Masters in Data Science focusing on Computational Methods at DePaul University in Chicago, IL. </p><p> Here you'll find a number of my favorite projects I've worked on. I hope you find them as interesting as me!</p>
+							</article>
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="minor">Text Analytics</h2>
+								<p>Python</p>
+								<span class="image main"><img src="images/UFO Doc.jpeg" width="100" height="450" /></span>
+								<p><font size="+1">Project Goals:</font><br />
+									<font size="-1">The goal of this project was to determine if there is any discernable pattern within the recently declassified documents provided by the CIA regarding Unidentified Flying Objects (“UFOs”). Specifically, there were a total of 2,780 documents that were recently released, each classified by the CIA as they contained potentially sensitive information. Our project was designed to discover if there were any patterns amongst the documents such that they could be classified into categories of similarity. The result would describe those documents that are most likely going to provide pertinent information related to the CIAs intelligence on UFOs. Our assumption is that if the majority of documents end up together in one particular grouping (class) then those documents are the vital documents containing a propensity of the meaningful information. Documents belonging to other classes would have some similarity amongst themselves but would be of a lower likelihood of containing pertinent information on the CIAs intelligence on UFOs.</font> </p>
+								<p><font size="+1">Results:</font><br />
+									<font size="-1">We had stated that at the outset our prediction had been that amongst the entirety of all the documents released by the CIA on UFOs only a portion of that documentation would contain any pertinent information. Our goal was to identify those documents specifically and present them as targets for potential future analysis. We conducted Kmeans Clustering and KNN Classification on both TFxIDF and PCA approaches. The end result was inline with our predictions, a large majority of the sampled documents fell into one cluster. Specifically of the 670 documents that were analyzed, a total of 610 fell into one cluster and as such should be deemed relevant for review. A future analysis should be done on the 610 identified documents.</font> <br />
+									<p><a href="Files/Project1.html" target="_blank" class="button small"> Report Here</a><br />
+									<a href="https://github.com/messin49/ProjCIA" target="_blank" class="button small"> Code Here</a></p>
+
+								<h2 class ="minor">Correspondence Analysis</h2>
+								<p>R Studio</p>
+								<span class="image main"><img src="images/CA Image.jpg" alt="" /></span>
+								<p><font size="+1">Project Goals:</font><br />
+									<font size="-1">The goal of this project was to attempt to summarize and interpret categorical variables of interest in our dataset. The data consisted of information regarding every regular season NFL game from 2000-2017, including the closing spread line of each game. More specifically, I looked at the relationship between each team type (above average offensively, below average defensively, etc.) vs the region of the US the game was played in as well as the relationship between the spread of the game vs. the team types playing. Using what we've found with these relationships, we can use this knowledge to identify bad lines offered by sportsbooks and how geographic location is related to measured offensive and defensive talent. </font></p>
+								<p><font size="+1">Results:</font><br />
+									<font size="-1">It was found that the East region played host to home teams with above average offenses and defenses more often than expected. The East region also played host to home teams with below average defenses less often than average. The South region illustrated almost exactly opposite results as the East region. In terms of how each team type relates to the pregame betting spread, home teams with below average offenses and defenses playing against away teams with above average offenses and defenses correspond highly with -3 lines. Smaller lines (i.e. -1 through -6.5) correspond highly to home teams with below average offenses and defenses and away teams with above average offenses and defenses. On the other hand, larger lines (> -7) show an acute directional relationship to away teams with below average offenses.</font></p>
+									<p><a href="Files/DSC 424 Project 1.pdf" target="_blank" class="button small"> Report Here</a><br />
+									<a href="https://github.com/messin49/ProjNFLCA" target="_blank" class="button small"> Code Here</a></p>
+								
+									<h2 class ="minor">Classification</h2>
+								<p>R Studio</p>
+								<span class="image main"><img src="images/441.jpg" alt="" /></span>
+								<p><font size="+1">Project Goals:</font><br />
+									<font size="-1">Throughout the industry, the magic number in sports betting is 52.4%. This is the golden win rate that all sports bettors strive for. You might ask: why not 51%? Well, on a typical NFL bet, the sportsbook factor in a vig which is essentially a 10% deposit on the amount you bet that you will get refunded if you win your bet, but you will lose if you lose your bet. Because of the vig, one must strive for a 52.4% win rate. This is the metric my model will be striving for in terms of accuracy. The goal of this model is to take in as much pregame information as I can regarding the game over the last 20 years, and see if I can identify if certain pregame factors can tell me which side of the O/U is more likely to hit. I will be using a classification model as I am are trying to predict the non-numeric result of if I should bet over, or under the O/U total for the game.</font></p>
+								<p><font size="+1">Results:</font><br />
+									<table>
+										<tr><td><b><font size="+1">Model</b></font><td><b><font size="+1">Accuracy</b></font></td></tr>
+										<tr><td>Decision Tree</td><td>49.41%</td></tr>
+										<tr><td>Decision Tree (Pruned)</td><td>48.15%</td></tr>
+										<tr><td>K-Nearest Neighbor</td><td>48.28%</td></tr>
+										<tr><td>Naive Bayes</td><td>51.45%</td></tr>
+									</table>
+									<font size="-1">None of my models performed up to our positive expected value benchmark of 52.4% accuracy. Looking back, this is most likely due to the complexity of the variables in the dataset. However, the fact that each model was within 2% of 50% accuracy is impressive to me and illustrates that there is something to predicting O/U totals in NFL games. Perhaps weather does not have as big of an impact on point totals in football games as I initially believed. If we were to revisit this in the future, I would actually like to incorporate some regression analysis into the specific O/U totals set for each game to see if we can identify certain totals that lean one way or the other more often that we can try and narrow our classifier on. Perhaps we could look more into the variable importance for each model and cut the amount of variables used in each model in half. If we actually take a closer look at each O/U total from every NFL game from the past 20 years, it’s incredible to note that the Over has hit in 49% of all games and the Under has hit in 51% of all games. This showcases incredible precision by oddsmakers to set these lines so as to not give an edge to one side or the other and partially explains why each of our models were hitting around the 50% mark. Only near the outliers of O/U totals do you see any major lean one way or the other.</font></p>
+									<p><a href="Files/441Proj.pdf" target="_blank" class="button small"> Report Here</a><br />
+									<a href="https://github.com/messin49/ProjNFLClassification" target="_blank" class="button small"> Code Here</a></p>
+								
+								<h2 class ="minor">Mapping/Geographic Analysis</h2>
+								<p>ArcGIS</p>
+								<span class="image main"><img src="images/FinalProjIncomesCounty.jpg" alt="" /></span>
+								<p><font size="+1">Project Goals:</font><br />
+									<font size="-1">As each NFL team is owned and operated differently, I want to see if there is any relation to the socioeconomic area a stadium was built to how much of the costs the local taxpayers had to bear in the construction of the stadium. Are the stadium costs more balanced across less economically rich areas? Do wealthy suburbs bear more cost than minority areas of the country? Are some NFL teams more conscious of this than others? These are some of the questions I will attempt to answer here. I want to see if there is any socio or economic disparity here and if anyone is being treated unfairly or being taken advantage of by these uber wealthy NFL owners who can pay for these stadiums personally. On average, every NFL stadium is paid for with 58% of public funds. Given the average stadium costs $525.4 million, this is $304.7 million that the taxpaying public will be paying for whether or not they are even a fan of the team or use the services of the stadium. As there is so much money being allocated to these sometimes-unnecessary stadiums, one would believe these taxpayer funds could be better allocated elsewhere to affect more people directly and in more enriching ways than entertainment.</font></p>
+								<p><font size="+1">Results:</font><br />
+									<font size="-1">While there are no conclusive findings to say that NFL stadiums are being built in areas to take advantage of certain racial demographics or take away from other tax allocations, we can see the southern region of the US is definitely worth our time to examine with a more fine lens given the area is shown to have predominantly black communities with low median incomes while the stadiums in the region are financed using primarily public funding. To take this spatial analysis another step forward, we can also compare regions of the US with stadiums to how taxpayer money is allocated in these areas to regions with no sports stadiums and see how tax revenue is allocated here and look for economic differences that could be caused by stadiums being or not being built.</font></p>
+									<p><a href="Files/GEO 441 Report.pdf" target="_blank" class="button small"> Report Here</a><br />
+									<a href="https://github.com/messin49/ProjMappingStadiums/blob/main/README.md" target="_blank" class="button small"> Code Here</a></p>
+								</article
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<h3 >Education</h3>
+								<p><font size="">Michigan State University (2010 - 2014) Bachelors</font><br />
+									<font size="-2"> Major: Finance</font><br />
+									<font size="-2"> Minor: Economics</font><br />
+								<font size="">DePaul University (2019 - Current) Masters</font><br />
+									<font size="-2"> Major: Data Science - Computational Methods</font></p>
+								<h3 >Professional Experience</h3>
+								<p><font size="">National Futures Association (2014 - Current)</font><br />
+									<font size="-2"> Compliance Investigator (2014 - 2018)</font><br />
+									<font size="-2"> Financial Analyst (2018 - Current)</font></p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Mike Messina</label>
+										</div>
+										<div class="field half">
+											<label for="email">mmessina135@gmail.com</label>
+										</div>
+									</div>
+								</form>
+								<ul class="icons">
+									<li><a href="https://www.linkedin.com/in/mikemessina135/" target="_blank" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+									<li><a href="https://github.com/messin49?tab=repositories" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Michael Messina 2021. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
